@@ -1,0 +1,224 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    color: #333;
+}
+
+/* Menu styles */
+.menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #4a90e2;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.menu-item {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 10px 0;
+    transition: background-color 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: #357ABD;
+}
+
+/* Section 2: Header with two columns */
+.section2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 40px 20px;
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') no-repeat center center;
+    background-size: cover;
+    color: white;
+    align-items: center;
+    gap: 20px;
+}
+
+.text-column h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+.text-column p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.text-column button {
+    background-color: #ff6f61;
+    border: none;
+    padding: 12px 25px;
+    color: white;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(255,111,97,0.5);
+    transition: background-color 0.3s ease;
+}
+
+.text-column button:hover {
+    background-color: #e65b50;
+}
+
+.image-column {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.image-column img {
+    max-width: 150px;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+/* Section 3: Biodata grid */
+.section3 {
+    padding: 40px 20px;
+    background-color: #f0f4f8;
+    text-align: center;
+}
+
+.biodata-header h2 {
+    font-size: 2em;
+    margin-bottom: 5px;
+    color: #4a90e2;
+}
+
+.biodata-header p {
+    font-size: 1em;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.biodata-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.biodata-item {
+    background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(102,166,255,0.5);
+    transition: transform 0.3s ease;
+}
+
+.biodata-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Section 4: Portfolio grid */
+.section4 {
+    padding: 40px 20px;
+    background-color: #ffffffcc;
+    text-align: center;
+}
+
+.section4 h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #4a90e2;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.portfolio-item {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.portfolio-item h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.portfolio-item p {
+    color: #666;
+    font-size: 0.95em;
+}
+
+/* Responsive design */
+
+/* Tablet */
+@media (max-width: 768px) {
+    .menu {
+        grid-template-columns: repeat(3, 1fr);
+        font-size: 0.9em;
+    }
+
+    .section2 {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .text-column button {
+        width: 100%;
+    }
+
+    .biodata-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .menu {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .menu-item {
+        padding: 15px 0;
+        font-size: 1.2em;
+    }
+
+    .section2 {
+        grid-template-columns: 1fr;
+        padding: 20px 10px;
+    }
+
+    .biodata-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
