@@ -1,83 +1,131 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Contoh Halaman HTML</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <!-- Section 1: Menu -->
-    <table border="1" width="100%">
-        <tr>
-            <td align="center"><a href="#section2">Header</a></td>
-            <td align="center"><a href="#section3">Biodata</a></td>
-            <td align="center"><a href="#section4">Portofolio</a></td>
-        </tr>
-    </table>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <div class="navbar-nav mx-auto">
+                <a class="nav-link active" href="#section2">Header</a>
+                <a class="nav-link" href="#section3">Biodata</a>
+                <a class="nav-link" href="#section4">Portofolio</a>
+            </div>
+        </div>
+    </nav>
 
     <!-- Section 2: Judul di kiri dan gambar di kanan -->
-    <table border="1" width="100%" id="section2">
-        <tr>
-            <td width="50%" align="left" valign="top">
+    <div class="container my-5" id="section2">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-white">
                 <h1>Selamat Datang di Website Saya</h1>
                 <p>Ini adalah contoh header dengan dua kolom. kolom kiri berisi teks seperti ini.</p>
-                <button>Pelajari lebih lanjut</button>
-            </td>
-            <td width="50%" align="center" valign="middle">
-                <img src="https://placehold.co/200" alt="Gambar Placeholder">
-            </td>
-        </tr>
-    </table>
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#infoModal">
+                    Pelajari lebih lanjut
+                </button>
+            </div>
+            <div class="col-md-6 d-flex justify-content-end">
+                <img src="https://www.wowkeren.com/display/images/photo/2023/11/30/00498991s8.webp" alt="Lee Min Ho" class="img-fluid rounded" style="max-width: 150px;" />
+            </div>
+        </div>
+    </div>
 
     <!-- Section 3: Biodata dengan 6 box -->
-    <table border="1" width="100%" id="section3">
-        <tr>
-            <td colspan="3" align="center">
-                <h2>About me</h2>
-                <p>A brief inroduction about myself</p>
-            </td>
-        </tr>
-        <tr>
-            <td align="center">Full Name</td>
-            <td align="center">Education</td>
-            <td align="center">Pekerjaan</td>
-        </tr>
-        <tr>
-            <td align="center">Contact</td>
-            <td align="center">Hobi</td>
-            <td align="center">Alamat</td>
-        </tr>
-    </table>
+    <div class="container my-5 bg-light text-center p-4 rounded" id="section3">
+        <div class="mb-4">
+            <h2 class="text-primary">About me</h2>
+            <p>A brief inroduction about myself</p>
+        </div>
+        <div class="row g-3">
+            <div class="col-6 col-md-4">
+                <div class="p-3 bg-primary text-white rounded shadow">Full Name</div>
+            </div>
+            <div class="col-6 col-md-4">
+                <div class="p-3 bg-primary text-white rounded shadow">Education</div>
+            </div>
+            <div class="col-6 col-md-4">
+                <div class="p-3 bg-primary text-white rounded shadow">Pekerjaan</div>
+            </div>
+            <div class="col-6 col-md-4">
+                <div class="p-3 bg-primary text-white rounded shadow">Contact</div>
+            </div>
+            <div class="col-6 col-md-4">
+                <div class="p-3 bg-primary text-white rounded shadow">Hobi</div>
+            </div>
+            <div class="col-6 col-md-4">
+                <div class="p-3 bg-primary text-white rounded shadow">Alamat</div>
+            </div>
+        </div>
+    </div>
 
     <!-- Section 4: Portofolio -->
-    <table border="1" width="100%" id="section4">
-        <tr>
-            <td colspan="2" align="center"><h2>Portofolio</h2></td>
-        </tr>
-        <tr>
-            <td align="center" valign="top">
-                <img src="https://placehold.co/200" alt="Gambar Placeholder">
-                <h3>Proyek 1</h3>
-                <p>Deskripsi proyek 1.</p>
-            </td>
-            <td align="center" valign="top">
-                <img src="https://placehold.co/200" alt="Gambar Placeholder">
-                <h3>Proyek 2</h3>
-                <p>Deskripsi proyek 2.</p>
-            </td>
-        </tr>
-        <tr>
-            <td align="center" valign="top">
-                <img src="https://placehold.co/200" alt="Gambar Placeholder">
-                <h3>Proyek 3</h3>
-                <p>Deskripsi proyek 3.</p>
-            </td>
-            <td align="center" valign="top">
-                <img src="https://placehold.co/200" alt="Gambar Placeholder">
-                <h3>Proyek 4</h3>
-                <p>Deskripsi proyek 4.</p>
-            </td>
-        </tr>
-    </table>
+    <div class="container my-5 bg-white p-4 rounded text-center" id="section4">
+        <h2 class="text-primary mb-4">Portofolio</h2>
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" class="card-img-top rounded" alt="Website project 1" />
+                    <div class="card-body">
+                        <h5 class="card-title">Proyek 1</h5>
+                        <p class="card-text">Deskripsi proyek 1.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" class="card-img-top rounded" alt="Website project 2" />
+                    <div class="card-body">
+                        <h5 class="card-title">Proyek 2</h5>
+                        <p class="card-text">Deskripsi proyek 2.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" class="card-img-top rounded" alt="Website project 3" />
+                    <div class="card-body">
+                        <h5 class="card-title">Proyek 3</h5>
+                        <p class="card-text">Deskripsi proyek 3.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" class="card-img-top rounded" alt="Website project 4" />
+                    <div class="card-body">
+                        <h5 class="card-title">Proyek 4</h5>
+                        <p class="card-text">Deskripsi proyek 4.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoModalLabel">Informasi Lebih Lanjut</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Ini adalah popup modal yang berisi informasi tambahan.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle CDN (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
